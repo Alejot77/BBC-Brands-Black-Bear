@@ -1,0 +1,52 @@
+.contact-shell .contact-layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:stretch}
+.contact-shell .contact-intro{padding:145px 5vw 100px;min-width:0;overflow:hidden;isolation:isolate;background:#000}
+.contact-shell .contact-intro h1{font-size:clamp(48px,6.4vw,110px);margin:0 0 40px;line-height:1.02}
+.contact-shell .brief-panel{min-width:0;padding:145px 5vw 65px;min-height:100svh}
+.contact-shell .brief-step{margin-top:0}
+.contact-shell .brief-step legend{font-size:clamp(28px,3.25vw,56px);max-width:100%;line-height:1.12}
+.contact-shell .channel-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin:0;position:relative;z-index:1}
+.contact-shell .channel-card{--channel-accent:#bfff0a;margin:0;min-width:0;background:#080808;color:#fff;border:1px solid #ffffff30;transform:none!important;border-radius:0;overflow:hidden}
+.contact-shell .channel-card:nth-child(2){--channel-accent:#7a36fb}
+.contact-shell .channel-card:nth-child(3){--channel-accent:#fa51a2}
+.contact-shell .channel-card:nth-child(4){--channel-accent:#ff7302}
+.contact-shell .channel-card summary{min-height:180px;padding:20px;display:flex;flex-direction:column;gap:10px;background:transparent;color:inherit}
+.contact-shell .channel-card-content{min-height:180px;padding:20px;display:flex;flex-direction:column;gap:10px;background:transparent;color:inherit}
+.contact-shell .channel-card{cursor:default}
+@media(max-width:1100px){.contact-shell .channel-card-content{padding:15px}}
+@media(max-width:380px){.contact-shell .channel-card-content{min-height:150px}}
+.contact-shell .channel-card .channel-top{font-size:11px;display:flex;justify-content:space-between;gap:8px}
+.contact-shell .channel-icon{width:28px;height:28px;margin:0}
+.contact-shell .channel-card .channel-title{font-size:clamp(18px,1.6vw,28px);line-height:1.1;letter-spacing:-.02em;overflow-wrap:anywhere;margin:0}
+.contact-shell .channel-status{font-size:12px;color:#bbb}
+.contact-shell .channel-bottom{display:none}
+.contact-shell .channel-card:hover,.contact-shell .channel-card:focus-within,.contact-shell .channel-card[open]{border-color:var(--channel-accent);background:#111}
+.contact-shell .channel-card:hover .channel-title,.contact-shell .channel-card[open] .channel-title,.contact-shell .channel-card:focus-within .channel-title,.contact-shell .channel-card:hover .channel-icon{color:var(--channel-accent)}
+.contact-shell .channel-detail{padding:0 20px 20px;background:#080808;color:#ccc;border:0;font-size:14px;line-height:1.5;overflow-wrap:anywhere}
+.contact-shell .channel-detail a{color:var(--channel-accent);font-size:14px}
+.contact-shell .contact-shape{position:absolute;pointer-events:none;z-index:0;width:125px;height:125px;object-fit:contain}
+.contact-shell .shape-one{left:-45px;bottom:0;transform:rotate(-15deg)}
+.contact-shell .shape-two{right:-40px;top:40%;transform:rotate(12deg)}
+.contact-shell>header .brand-motion-bbc.on-light img{filter:none!important}
+.contact-shell .project-options span{overflow-wrap:anywhere}
+.contact-shell .contact-fields{min-width:0}
+.contact-shell .contact-fields input,.contact-shell .brief-step>input{width:100%;min-width:0}
+@media(max-width:1100px){
+ .contact-shell .contact-intro{padding-left:4vw;padding-right:4vw}
+ .contact-shell .brief-panel{padding-left:4vw;padding-right:4vw}
+ .contact-shell .channel-card summary{padding:15px}
+}
+@media(max-width:800px){
+ .contact-shell .contact-layout{grid-template-columns:1fr}
+ .contact-shell .contact-intro{padding:125px 6vw 65px}
+ .contact-shell .contact-intro h1{font-size:clamp(54px,13vw,90px)}
+ .contact-shell .brief-panel{padding:75px 6vw 65px;min-height:0}
+ .contact-shell .brief-step legend{font-size:clamp(30px,7vw,48px)}
+ .contact-shell .channel-card .channel-title{font-size:22px}
+ .contact-shell .shape-two{top:25%;width:100px}
+}
+@media(max-width:380px){.contact-shell .channel-grid{grid-template-columns:1fr}.contact-shell .channel-card summary{min-height:150px}}
+
+/* Center the current form step in the whole right-hand column. */
+.contact-shell .brief-panel{display:flex;flex-direction:column;justify-content:center;align-items:center;padding-top:110px;padding-bottom:110px}
+.contact-shell .brief-panel form,.contact-shell .brief-panel #brief-result{width:100%;max-width:760px;margin-inline:auto;min-width:0}
+@media(max-width:800px){.contact-shell .brief-panel{padding-top:75px;padding-bottom:75px}}

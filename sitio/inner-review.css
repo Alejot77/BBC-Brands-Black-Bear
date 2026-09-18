@@ -1,0 +1,77 @@
+.site-shell>header{position:fixed;top:0;height:70px;padding:0 2.6vw;background:transparent!important;backdrop-filter:none!important;display:flex;justify-content:space-between}
+.site-shell>header nav{display:flex!important;gap:24px!important;font-size:10px!important;letter-spacing:.12em;text-transform:uppercase;background:linear-gradient(140deg,#ffffff12,#ffffff05),#12121250!important;padding:14px 22px!important;border-radius:100px!important}
+.site-shell>header .brand{display:flex!important}
+.site-shell>header .brand img{filter:invert(1)!important}
+.site-shell>header nav a[aria-current=page]{color:#bfff0a}
+.site-shell .home-footer{background:#000;color:#fff}
+.site-shell .manifesto h1,.site-shell .manifesto h1>span{font-weight:600}
+.site-shell .manifesto-bottom>p{font-size:clamp(18px,1.75vw,28px);line-height:1.45;max-width:460px}
+.site-shell .manifesto-mark{display:flex;gap:3vw;align-items:center;justify-content:center;width:30vw;height:auto;right:5vw;top:30%;z-index:0;opacity:.65}
+.site-shell .manifesto-mark .manifesto-symbol{position:static!important;inset:auto!important;width:46%!important;height:130px;object-fit:contain;transform:none!important;opacity:.28}
+.site-shell #metodo{display:grid;grid-template-columns:1fr 1fr;gap:0;padding:0;background:#000;color:#fff;align-items:stretch}
+.site-shell #metodo .method-heading{position:relative;top:auto;margin:0;min-width:0;align-self:stretch;height:auto}
+.site-shell #metodo .method-media{display:block;position:sticky;top:0;height:100svh;width:100%;margin:0}
+.site-shell #metodo .method-slides{height:100%;width:100%;aspect-ratio:auto}
+.site-shell #metodo .method-slide{height:100%;width:100%;object-fit:cover}
+.site-shell #metodo .method-list{padding:70px 4vw;margin:0}
+.site-shell #metodo article{--step-color:#bfff0a;min-height:270px;padding:40px 0;border-color:#ffffff24;background:#000}
+.site-shell #metodo article:nth-child(2){--step-color:#7a36fb}
+.site-shell #metodo article:nth-child(3){--step-color:#fa51a2}
+.site-shell #metodo article:nth-child(4){--step-color:#ff7302}
+.site-shell #metodo article h3{font-size:clamp(26px,2.8vw,48px);color:#fff;transition:color .35s,transform .35s}
+.site-shell #metodo article:hover h3,.site-shell #metodo article:focus h3,.site-shell #metodo article.is-current h3{color:var(--step-color)}
+.site-shell #metodo article p{color:#bdbdbd;font-size:16px}
+.site-shell #metodo article .method-tag{color:#fff;font-size:12px}
+.site-shell #metodo .method-number{color:#fff;border-color:#ffffff45;background:transparent}
+.site-shell #metodo .is-current .method-number{background:var(--step-color);border-color:var(--step-color);color:#000}
+.site-shell #metodo .method-inline{display:none}
+.site-shell .team{overflow:hidden;background:#000}
+.site-shell .team-grid{display:block;position:relative;perspective:1400px;height:640px;max-width:1150px;margin:65px auto 0}
+.site-shell .team-grid .crew-card:nth-child(n){position:absolute;left:50%;top:0;width:clamp(290px,34vw,450px);margin:0;z-index:calc(3 - var(--depth,0));transform:translateX(calc(-50% + var(--offset,0)*65%)) translateY(calc(var(--depth,0)*32px)) rotateY(calc(var(--offset,0)*-16deg)) scale(calc(1 - var(--depth,0)*.13))!important;filter:brightness(calc(1 - var(--depth,0)*.4));transition:transform .8s cubic-bezier(.22,1,.36,1),filter .6s}
+.site-shell .team-grid .crew-toggle{height:580px}
+.site-shell .team-controls{display:flex;align-items:center;justify-content:center;gap:28px;margin:20px 0}
+.site-shell .team-controls button{width:48px;height:48px;border:1px solid #ffffff50;background:transparent;border-radius:50%;font-size:24px}
+.site-shell .team-controls button:hover{background:#fff;color:#000}
+.site-shell .team-position{font-size:14px;font-variant-numeric:tabular-nums}
+@media(max-width:800px){
+ .site-shell>header{height:76px;padding:0 4vw}
+ .site-shell>header nav{gap:10px!important;padding:12px 13px!important}
+ .site-shell>header nav a{font-size:9px!important}
+ .site-shell .manifesto-mark{position:relative;top:auto;right:auto;width:65%;margin:35px 0 0;gap:25px}
+ .site-shell .manifesto-mark .manifesto-symbol{height:70px}
+ .site-shell .manifesto-bottom>p{font-size:20px}
+ .site-shell #metodo{grid-template-columns:1fr}
+ .site-shell #metodo .method-heading{position:sticky;top:0;z-index:2}
+ .site-shell #metodo .method-media{position:relative;height:40svh;min-height:250px}
+ .site-shell #metodo .method-list{padding:20px 6vw}
+ .site-shell #metodo article{min-height:240px}
+ .site-shell .team-grid{height:530px}
+ .site-shell .team-grid .crew-card:nth-child(n){width:76vw;max-width:390px}
+ .site-shell .team-grid .crew-toggle{height:500px}
+}
+@media(prefers-reduced-motion:reduce){.site-shell .team-grid .crew-card:nth-child(n){transition:none}}
+.site-shell .manifesto{overflow:visible;z-index:3}
+.site-shell .manifesto .manifesto-mark .manifesto-symbol{opacity:.045!important}
+.site-shell #equipo:before,.site-shell #equipo:after{opacity:.025!important}
+.site-shell .manifesto .about-film,.site-shell .manifesto .about-film-shade{overflow:hidden}
+.site-shell .manifesto-mark{position:absolute;inset:0!important;width:100%;height:100%;margin:0;display:block;opacity:1}
+.site-shell .manifesto-mark .symbol-bbc{position:absolute!important;inset:18% 1vw auto auto!important;width:30vw!important;height:auto;opacity:.09;transform:rotate(-12deg)!important}
+.site-shell .manifesto-mark .symbol-bb{position:absolute!important;inset:auto auto -65px 2vw!important;width:18vw!important;height:auto;opacity:.12;transform:rotate(12deg)!important}
+.site-shell .manifesto h1,.site-shell .manifesto-bottom{position:relative;z-index:1}
+.site-shell #equipo{position:relative;isolation:isolate}
+.site-shell #equipo:before,.site-shell #equipo:after{content:'';position:absolute;pointer-events:none;z-index:-1;background-repeat:no-repeat;background-position:center;background-size:contain;filter:invert(1);opacity:.07}
+.site-shell #equipo:before{background-image:url('/assets/bbc-symbol.svg');width:37vw;height:32vw;left:-7vw;top:10%;transform:rotate(-15deg)}
+.site-shell #equipo:after{background-image:url('/assets/black-bear-symbol.svg');width:28vw;height:32vw;right:-4vw;bottom:4%;transform:rotate(15deg)}
+.site-shell .team-grid .crew-card:nth-child(n){transition:transform .8s cubic-bezier(.22,1,.36,1),filter .6s,opacity .6s}
+@media(max-width:800px){
+ .site-shell .manifesto-mark .symbol-bbc{width:45vw!important;top:15%!important}
+ .site-shell .manifesto-mark .symbol-bb{width:28vw!important;bottom:-35px!important}
+ .site-shell #metodo .method-heading{align-self:start}
+ .site-shell #equipo:before,.site-shell #equipo:after{width:65vw;height:65vw}
+}
+
+/* Decorative logos stay horizontal and complete across section boundaries. */
+.site-shell .manifesto-mark,.site-shell .manifesto-mark .manifesto-symbol{transform:none!important;animation:none!important}
+.site-shell #equipo{overflow:visible}
+.site-shell #equipo:before{left:0;transform:none}
+.site-shell #equipo:after{right:0;transform:none}
