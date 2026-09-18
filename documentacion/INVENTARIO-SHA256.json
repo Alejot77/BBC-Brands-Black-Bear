@@ -1,0 +1,337 @@
+[
+  {
+    "archivo": "app.js",
+    "bytes": 15836,
+    "sha256": "1d213268533538ace53d3ebe0f5d3faa760f639171c1697d5cfe21bc632afdd0"
+  },
+  {
+    "archivo": "assets/adidas.svg",
+    "bytes": 243,
+    "sha256": "914191458c0f416cfb1e5ad5750c55e87bd9a6cdc38259cfba70932b30a9237b"
+  },
+  {
+    "archivo": "assets/bbc-brands.png",
+    "bytes": 4329,
+    "sha256": "2224c36760df68fda87406494433538fa92e6f7965c3fbac1e5a784ab86742e8"
+  },
+  {
+    "archivo": "assets/bbc-brands.svg",
+    "bytes": 6302,
+    "sha256": "beb0dfa81c71dc653d7231f55206422c2f0a1ba4025a71aa60184055130219da"
+  },
+  {
+    "archivo": "assets/bbc-symbol.svg",
+    "bytes": 774,
+    "sha256": "e948182e3de12db0e74bba50af1b4a379580aa877a4de1f3832cd6a9bc71cb5d"
+  },
+  {
+    "archivo": "assets/black-bear-symbol.svg",
+    "bytes": 496,
+    "sha256": "1227f8237011129b78c33f82bac83cf2739a31600e14f09aa3d94be7f2095b6f"
+  },
+  {
+    "archivo": "assets/black-bear.png",
+    "bytes": 3436,
+    "sha256": "3923362b00e7822006ebadece6cadd81e79e9cee7b62c15fe00d97029b8af4ee"
+  },
+  {
+    "archivo": "assets/black-bear.svg",
+    "bytes": 5183,
+    "sha256": "b3056a9f3098deb9ca835d9bdef3f1c58a41a0c7d3ce6cf5bad74dd2cfcf9890"
+  },
+  {
+    "archivo": "assets/crew-placeholder-1.png",
+    "bytes": 1805221,
+    "sha256": "8e52e057b61b5c7b4cf25ba1e8c3c0aaf14fcd3f9057d286e24b508657c23bcb"
+  },
+  {
+    "archivo": "assets/crew-placeholder-2.png",
+    "bytes": 1834621,
+    "sha256": "a3aa93a3317ef865adab356ee9bfa7f02fccd0513e1d79b121d8e936109bdc66"
+  },
+  {
+    "archivo": "assets/crew-placeholder-3.png",
+    "bytes": 1647172,
+    "sha256": "876bb791343cc802b2175db2b52cd5c3169b96de9d424fb15275d65a02aaf893"
+  },
+  {
+    "archivo": "assets/festival-detail.webp",
+    "bytes": 40308,
+    "sha256": "31dd3bb6d35e7726070bca1db87ef2bcb428e1f005e410581e6766379f944710"
+  },
+  {
+    "archivo": "assets/festival-wide.webp",
+    "bytes": 18652,
+    "sha256": "a21724551a88bd3b1a147ed7583609ebc0fd26019780733196e5890bb07738b3"
+  },
+  {
+    "archivo": "assets/fonts/Franie-Black.woff2",
+    "bytes": 31664,
+    "sha256": "c1c715811afd67e3bb7d7e41dc12a185d123913f37d99d45b503cfe5a2b0165d"
+  },
+  {
+    "archivo": "assets/fonts/Franie-Bold.woff2",
+    "bytes": 32024,
+    "sha256": "746ac93c7ccb84d603f89f0a65c15ec49001a5409314c34ae6258a81f0461e65"
+  },
+  {
+    "archivo": "assets/fonts/Franie-ExtraBold.woff2",
+    "bytes": 32252,
+    "sha256": "3dfb75cd2a2d870372a49a1970e4e3141d2624fd3c6d226ee9ff26e89ed9087c"
+  },
+  {
+    "archivo": "assets/fonts/Franie-ExtraLight.woff2",
+    "bytes": 31044,
+    "sha256": "d8f6e8b5c885e72cbb60a2b62d4d7e0e5b083471bff51dd2ddbaf6c2d711a86f"
+  },
+  {
+    "archivo": "assets/fonts/Franie-Hair.woff2",
+    "bytes": 30416,
+    "sha256": "bd07b7e3515370979539dfdd8e4cfed918d7180f1006972b56861727c19014ed"
+  },
+  {
+    "archivo": "assets/fonts/Franie-Light.woff2",
+    "bytes": 31400,
+    "sha256": "0833f612c5e935353fe5ea44bb387701a1df8dda216961891db23dbe8d34fff6"
+  },
+  {
+    "archivo": "assets/fonts/Franie-Regular.woff2",
+    "bytes": 31680,
+    "sha256": "23cc5f4c521145d3462641688d931627b7a0f842d1a5f9e4efb822b265a98655"
+  },
+  {
+    "archivo": "assets/fonts/Franie-SemiBold.woff2",
+    "bytes": 32112,
+    "sha256": "f3a1eaf5fc19272e90ef9302292aab12697f0367582a5359fd64ae14fceb2a52"
+  },
+  {
+    "archivo": "assets/fonts/Franie-SemiLight.woff2",
+    "bytes": 31328,
+    "sha256": "90ad81d5a182b8fd71b343b042674aa0259dc0ef3ff81a726ed81c7331d03ad4"
+  },
+  {
+    "archivo": "assets/method-concept.png",
+    "bytes": 2422423,
+    "sha256": "a3fee925b9c433e242a5d0df9e0d152cb51d46bb6e2262fc973b9b627adda2c6"
+  },
+  {
+    "archivo": "assets/method-logistics.png",
+    "bytes": 2040878,
+    "sha256": "ac22de6df92958700907345614d05b75a119b8f1ef3e95982170e99088717838"
+  },
+  {
+    "archivo": "assets/method-production.png",
+    "bytes": 2711130,
+    "sha256": "da1dde7c9d36c03a95de50f10eee234556f6d14f3322e9e1095bf0821dc058d8"
+  },
+  {
+    "archivo": "assets/nestle.svg",
+    "bytes": 6360,
+    "sha256": "1297e544ab55c3ac4f4f8653a4e779704ae0dc9b0e655ac10d096de6bb3e0c64"
+  },
+  {
+    "archivo": "assets/partners/adidas.svg",
+    "bytes": 243,
+    "sha256": "914191458c0f416cfb1e5ad5750c55e87bd9a6cdc38259cfba70932b30a9237b"
+  },
+  {
+    "archivo": "assets/partners/bachoco.svg",
+    "bytes": 18372,
+    "sha256": "4495f6240da40bf50b42f1a34891be9b7d1ea6ec87c67d94e081402b13e010e1"
+  },
+  {
+    "archivo": "assets/partners/bimbo.svg",
+    "bytes": 10120,
+    "sha256": "1eb023e8bf999f0d4b71eb6766d6afab7725baca9a29fbccc93ff4074516ccb8"
+  },
+  {
+    "archivo": "assets/partners/calimax-clean.svg",
+    "bytes": 212414,
+    "sha256": "98356c86d2206c16ba27e4b36d2304a4da021cd4a6ff17824bba94e41c767530"
+  },
+  {
+    "archivo": "assets/partners/calimax.jpg",
+    "bytes": 159207,
+    "sha256": "13639c3d416d2be36d1d4b10c07fa395864461fc01381d43df824842114f2189"
+  },
+  {
+    "archivo": "assets/partners/chazki-clean.svg",
+    "bytes": 37841,
+    "sha256": "f6dea6da4439dc7d6ef841d9b523b503ef623f705a7e706d6996f2d625716947"
+  },
+  {
+    "archivo": "assets/partners/chazki.webp",
+    "bytes": 28278,
+    "sha256": "0434c9d14371370fde306dc030e6af77b5b56db0c19259d79220b594c26cb3b9"
+  },
+  {
+    "archivo": "assets/partners/costena-clean.svg",
+    "bytes": 3861,
+    "sha256": "efb60a28d058e3a9fd805c0e6c94a7bf08ed6105875896d277becaa51df676fc"
+  },
+  {
+    "archivo": "assets/partners/costena.png",
+    "bytes": 2797,
+    "sha256": "de89d6a4b3abf397c47ed78752aff4d6b9269acf5a022fd8d6f6c292e5620190"
+  },
+  {
+    "archivo": "assets/partners/jumex.svg",
+    "bytes": 5456,
+    "sha256": "bd7ae5d1f8f75f83f77a870a7a42a524d7743a93d94303e26ec53ec5a1f4b2db"
+  },
+  {
+    "archivo": "assets/partners/kelloggs.svg",
+    "bytes": 5273,
+    "sha256": "bb98a563ab5eeda8eaf3329b0ef56e9dd9449a5b913960a7b4176f05061583e2"
+  },
+  {
+    "archivo": "assets/partners/lala.svg",
+    "bytes": 6915,
+    "sha256": "df925205cbc5d103835f8eb4557c2ea300a6f488cd16e7a06af3d1cb7e045634"
+  },
+  {
+    "archivo": "assets/partners/nestle.svg",
+    "bytes": 6360,
+    "sha256": "1297e544ab55c3ac4f4f8653a4e779704ae0dc9b0e655ac10d096de6bb3e0c64"
+  },
+  {
+    "archivo": "assets/partners/padel-co-clean.svg",
+    "bytes": 31771,
+    "sha256": "71a6e5658e16c9da36475ed93e8828447e6c847ba086a9cc0b4cc7850fd1d424"
+  },
+  {
+    "archivo": "assets/partners/padel-co.png",
+    "bytes": 23728,
+    "sha256": "b8bb80502c743558c45c65ab3b46408c55acc3e2387f43a5c24ccb94e642ad2b"
+  },
+  {
+    "archivo": "assets/partners/penafiel-clean.svg",
+    "bytes": 23325,
+    "sha256": "f0caab5d11ca3d7c5f58dbc042a25ab7a3f382cda3ba0bcb0eda567ae8413ade"
+  },
+  {
+    "archivo": "assets/partners/penafiel.png",
+    "bytes": 17396,
+    "sha256": "db0953bf11cd1a5cbb9704a6642664a6e96adf9c45b82725d3939102633122ee"
+  },
+  {
+    "archivo": "assets/partners/rappi.svg",
+    "bytes": 13368,
+    "sha256": "23ce12f484d34170b6ce32f3dabead22e28b9dee6548be789a4005d6470f0eda"
+  },
+  {
+    "archivo": "assets/partners/red-bull.svg",
+    "bytes": 2873,
+    "sha256": "f630d0fb80efc96b3e12135b62341dcac44140f3558a4e28874c706f857ec635"
+  },
+  {
+    "archivo": "assets/partners/revlon.svg",
+    "bytes": 1056,
+    "sha256": "101c69ccc362fd716247ea01086a592c5e1dc05978692250f2fafc5c229465c9"
+  },
+  {
+    "archivo": "assets/partners/schweppes-clean.svg",
+    "bytes": 299299,
+    "sha256": "e616d07218e3f149fb30fbd5ed2216da63f5634ade06e0588f7bad5fe891fa86"
+  },
+  {
+    "archivo": "assets/partners/schweppes.png",
+    "bytes": 224369,
+    "sha256": "348dd4b2777a999507c0d49edb24697c4d4af9aaee69b3eebc7b24c98d79997a"
+  },
+  {
+    "archivo": "assets/partners/sigma-clean.svg",
+    "bytes": 22355,
+    "sha256": "c7b6ae11439bfd52d3b355295d68cef28dc58b606cef9e6d7a35d651b1fbfa3b"
+  },
+  {
+    "archivo": "assets/partners/sigma.png",
+    "bytes": 16667,
+    "sha256": "b6778cc31b7bbebe22899b42450554f3c9d344a0d2f7845521eff977a45a8264"
+  },
+  {
+    "archivo": "assets/partners/soho-house-clean.svg",
+    "bytes": 7284,
+    "sha256": "9fdd472f9a882fb2eb34ccf0f413a019cb5f5636cffcd6fc7f3bfcc1da1affe2"
+  },
+  {
+    "archivo": "assets/partners/soho-house.png",
+    "bytes": 5361,
+    "sha256": "ffc411ed79581f1d5d3c22d5b6b28b7558c2ba1dd783503e69cbd39e9db2ba2c"
+  },
+  {
+    "archivo": "assets/partners/walmart.svg",
+    "bytes": 28041,
+    "sha256": "d8e3b5b19bc14a7e4ed3df60068c86ca6f90eb96a127227797d216d227a824fe"
+  },
+  {
+    "archivo": "assets/rappi.svg",
+    "bytes": 13368,
+    "sha256": "23ce12f484d34170b6ce32f3dabead22e28b9dee6548be789a4005d6470f0eda"
+  },
+  {
+    "archivo": "assets/revlon.svg",
+    "bytes": 1056,
+    "sha256": "101c69ccc362fd716247ea01086a592c5e1dc05978692250f2fafc5c229465c9"
+  },
+  {
+    "archivo": "assets/showreel-poster-2.jpg",
+    "bytes": 26775,
+    "sha256": "c0d0f0dbde8490f7551eaaded9d229474462500c181685d3ea3c9b334b6f8f2e"
+  },
+  {
+    "archivo": "assets/showreel-poster.jpg",
+    "bytes": 32176,
+    "sha256": "bb7eaf120fd5e1a16da5c1c7b2be557615fb2236eb3415baefc79e0dab2bf66e"
+  },
+  {
+    "archivo": "assets/showreel.mp4",
+    "bytes": 2828585,
+    "sha256": "5515601b2aa4de4623660005df730bb3b866d975cbe27d6308d9a9a0db513718"
+  },
+  {
+    "archivo": "assets/walmart.svg",
+    "bytes": 4155,
+    "sha256": "e7deae878c81e93ef8e23de0465795a966043284d2a3e69a2e0044246cc08240"
+  },
+  {
+    "archivo": "contact-config.json",
+    "bytes": 29,
+    "sha256": "c34f63f8f8f43affa0001823913e930796218a69b563c9d9fcea4ff6dc22528e"
+  },
+  {
+    "archivo": "contacto/index.html",
+    "bytes": 10650,
+    "sha256": "ca223461ffc4bc0a3b0556fd12c9866e3cb45bd74d81573fc32c11b62c63d1f4"
+  },
+  {
+    "archivo": "favicon.svg",
+    "bytes": 162,
+    "sha256": "5c2345648960cb3094be8b1d3a1a731a60191fd63e01e1a06a391148559a9428"
+  },
+  {
+    "archivo": "font.css",
+    "bytes": 1321,
+    "sha256": "e573be4f1991f41bea739aaee0b60803fe07313439f9720f27bc05f2c17bf30a"
+  },
+  {
+    "archivo": "index.html",
+    "bytes": 9479,
+    "sha256": "a1a9ca191eb487641100fb188b1d9ef647dfcb50441e147f9a9784d509dc9a61"
+  },
+  {
+    "archivo": "inner.js",
+    "bytes": 11254,
+    "sha256": "f924206c59cd4e78df91550299c0ae9a97e8addced90741a3154b7c3d8f163aa"
+  },
+  {
+    "archivo": "nosotros/index.html",
+    "bytes": 12104,
+    "sha256": "47abb718dd01c2862fac91b9306297f93ee0c8e152619c0d3fab3e60e5203921"
+  },
+  {
+    "archivo": "style.css",
+    "bytes": 76802,
+    "sha256": "9690c2e4b496cef78e91368f5d2aaf3143b980ab49e453c5b66a7781f5335ad7"
+  }
+]
