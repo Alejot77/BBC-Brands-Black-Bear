@@ -10,7 +10,7 @@
    card.querySelector('.crew-toggle').setAttribute('aria-label','Explorar '+p.name);
    if(p.role)card.querySelector('.crew-role').textContent=p.role;
    if(p.bio)card.querySelector('.crew-back-note').textContent=p.bio;
-   if(p.photo&&(p.photo.startsWith('assets/')||httpsUrl(p.photo))){const image=card.querySelector('.crew-photo');image.src=p.photo;image.alt=p.name}
+   if(p.photo&&(p.photo.startsWith('/assets/')||httpsUrl(p.photo))){const image=card.querySelector('.crew-photo');image.src=p.photo;image.alt=p.name}
    const links=document.createElement('div');links.className='crew-profile-links';
    [['linkedin','LinkedIn'],['playlist','Escuchar su playlist ↗']].forEach(([key,label])=>{const url=httpsUrl(p[key]);if(!url)return;const a=document.createElement('a');a.href=url;a.target='_blank';a.rel='noopener noreferrer';a.textContent=label;links.append(a)});
    if(links.childElementCount)card.append(links);

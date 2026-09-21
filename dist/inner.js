@@ -12,7 +12,9 @@ form.onsubmit=async e=>{
  e.preventDefault();if(sending||!validate())return;if(step<fields.length-1){step++;show();return}
  sending=true;next.disabled=true;back.disabled=true;next.textContent='Enviando…';error.textContent='';form.setAttribute('aria-busy','true');
  try{
-  const settings={"submitEndpoint": null};
+  const configResponse=await fetch('/contact-config.json',{cache:'no-store'});
+  if(!configResponse.ok)throw new Error('config');
+  const settings=await configResponse.json();
   if(!settings.submitEndpoint){error.textContent='El envío aún no está habilitado. Estamos conectando el canal de recepción.';return}
   const data=Object.fromEntries(new FormData(form));
   const response=await fetch(settings.submitEndpoint,{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(data),signal:AbortSignal.timeout(15000)});

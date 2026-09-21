@@ -125,3 +125,10 @@ body{padding-bottom:94px}
 @media(max-width:600px){.quiet-nav{gap:14px;padding:10px 15px}.quiet-nav a{font-size:10px}:is(.home-page,.site-shell) .home-footer{grid-template-columns:1fr;gap:24px}:is(.home-page,.site-shell) .home-footer-statement{grid-column:1;grid-row:1}:is(.home-page,.site-shell) .home-footer-top{grid-column:1;grid-row:2}:is(.home-page,.site-shell) .home-footer-directory{display:flex!important;flex-wrap:wrap;align-items:flex-start;gap:22px}:is(.home-page,.site-shell) .home-footer-directory>div:first-child{margin-right:auto}:is(.home-page,.site-shell) .footer-open-bottom{grid-row:3}.contact-shell .contact-intro h1>span{font-size:4.4vw}}
 
 .site-shell .history-film{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;margin-top:16px;filter:none}
+
+/* v18: discreet navigation, top right */
+.quiet-nav{top:20px;right:4.5vw;bottom:auto;left:auto;transform:none;max-width:calc(100vw - 32px)}
+.quiet-nav.is-hidden{transform:translateY(calc(-100% - 40px));opacity:0;pointer-events:none}
+.quiet-nav:focus-within{transform:none;opacity:1;pointer-events:auto}
+.contact-shell .quiet-nav{background:linear-gradient(130deg,#ffffff70,#ffffff20),#20202070}
+@media(max-width:600px){.quiet-nav{top:64px;right:16px;gap:12px;padding:10px 13px}.quiet-nav a{font-size:10px}.quiet-brand-header{top:16px}.contact-layout{padding-top:108px}.contact-intro{padding-top:24px}}
