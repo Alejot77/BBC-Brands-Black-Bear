@@ -104,8 +104,8 @@
 :is(.home-page,.site-shell) .footer-legal small{font-size:12px;line-height:1.6;color:#999}
 .home-page #marcas{position:relative;isolation:isolate;overflow:hidden}
 .home-page #marcas:before,.home-page #marcas:after{content:'';position:absolute;background-repeat:no-repeat;background-position:center;background-size:contain;filter:invert(1);opacity:.035;pointer-events:none;z-index:-1}
-.home-page #marcas:before{background-image:url('/assets/black-bear-symbol.svg');width:30vw;height:36vw;left:-3vw;top:-8%;transform:rotate(-12deg)}
-.home-page #marcas:after{background-image:url('/assets/bbc-symbol.svg');width:36vw;height:28vw;right:-4vw;bottom:-12%;transform:rotate(12deg)}
+.home-page #marcas:before{background-image:url('assets/black-bear-symbol.svg');width:30vw;height:36vw;left:-3vw;top:-8%;transform:rotate(-12deg)}
+.home-page #marcas:after{background-image:url('assets/bbc-symbol.svg');width:36vw;height:28vw;right:-4vw;bottom:-12%;transform:rotate(12deg)}
 .home-page #marcas .client-stage{gap:24px;transform:translateX(2vw)}
 .home-page #marcas .client-stage h2{text-align:right}
 @media(max-width:800px){

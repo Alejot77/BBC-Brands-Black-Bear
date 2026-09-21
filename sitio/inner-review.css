@@ -60,8 +60,8 @@
 .site-shell .manifesto h1,.site-shell .manifesto-bottom{position:relative;z-index:1}
 .site-shell #equipo{position:relative;isolation:isolate}
 .site-shell #equipo:before,.site-shell #equipo:after{content:'';position:absolute;pointer-events:none;z-index:-1;background-repeat:no-repeat;background-position:center;background-size:contain;filter:invert(1);opacity:.07}
-.site-shell #equipo:before{background-image:url('/assets/bbc-symbol.svg');width:37vw;height:32vw;left:-7vw;top:10%;transform:rotate(-15deg)}
-.site-shell #equipo:after{background-image:url('/assets/black-bear-symbol.svg');width:28vw;height:32vw;right:-4vw;bottom:4%;transform:rotate(15deg)}
+.site-shell #equipo:before{background-image:url('assets/bbc-symbol.svg');width:37vw;height:32vw;left:-7vw;top:10%;transform:rotate(-15deg)}
+.site-shell #equipo:after{background-image:url('assets/black-bear-symbol.svg');width:28vw;height:32vw;right:-4vw;bottom:4%;transform:rotate(15deg)}
 .site-shell .team-grid .crew-card:nth-child(n){transition:transform .8s cubic-bezier(.22,1,.36,1),filter .6s,opacity .6s}
 @media(max-width:800px){
  .site-shell .manifesto-mark .symbol-bbc{width:45vw!important;top:15%!important}

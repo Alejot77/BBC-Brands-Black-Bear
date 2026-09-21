@@ -12,7 +12,7 @@ const clamp=(n,a,b)=>Math.max(a,Math.min(b,n));
 // A single, irregular 3D field; service labels belong to this same mesh.
 const stars=Array.from({length:500},()=>({x:(rand()-.5)*5.4,y:(rand()-.5)*3.5,z:(rand()-.5)*2.8,r:rand()}));
 const field=Array.from({length:165},()=>({x:(rand()-.5)*4.8,y:(rand()-.5)*2.9,z:(rand()-.5)*2,phase:rand()*6.28}));
-const serviceWorld=data.map((d,i)=>({x:(d[3]-.5)*3.7,y:(d[4]-.46)*2.9,z:[.1,-.35,.6,-.5,.3,-.15,.5,-.2,.45,-.45,.1,.5,-.15,-.55,.25][i],phase:i*.8}));
+const serviceWorld=data.map((d,i)=>({x:(d[3]-.5)*3.7,y:(d[4]-.46)*2.9,z:[.1,-1.65,1.15,-1.3,.55,-.15,1.45,-.95,.8][i],phase:i*.8}));
 const full=[...field,...serviceWorld];const edges=[];
 for(let i=0;i<full.length;i++){const a=full[i];const near=full.map((b,j)=>({j,d:(a.x-b.x)**2+(a.y-b.y)**2+(a.z-b.z)**2*.3})).filter(n=>n.j!==i).sort((a,b)=>a.d-b.d).slice(0,i>=field.length?7:3);for(const n of near){if(n.j>i||i>=field.length)edges.push([i,n.j])}}
 const gestures=document.querySelector('#gestures'),gx=gestures.getContext('2d'),cursor=document.querySelector('#cursor');let stamps=[],path=[],pointerX=-100,pointerY=-100,stampX=-100,stampY=-100,pointerActive=false,lightSurface=false,lastPointer=0;
@@ -25,11 +25,11 @@ function project(p,centerY,scale){const x1=p.x*Math.cos(yaw)-p.z*Math.sin(yaw),z
 let previousScroll=scrollY;function frame(now){requestAnimationFrame(frame);if(document.hidden)return;const dt=Math.min((now-last)/1000,.05);last=now;if(!paused)time+=dt;
 px+=(mx-px)*.045;py+=(my-py)*.045;const mobile=w<=800;const r=universe.getBoundingClientRect();const visible=r.top<h&&r.bottom>0;const inWorld=clamp((h-r.top)/h,0,1);scrollCamera+=(clamp((scrollY-universe.offsetTop)/Math.max(1,h),-.8,.8)-scrollCamera)*.045;
 yaw=paused?0:px*.22+scrollCamera*.12+Math.sin(time*.035)*.065;pitch=paused?0:-py*.09+Math.cos(time*.028)*.035;
-canvas.style.opacity=visible?'1':'0';ctx.clearRect(0,0,w,h);const centerY=visible?r.top+(r.height-90)*.5:h*.53;const scale=mobile?w*.34:Math.min(w*.27,r.height*.58);const fade=visible?1:.42;
+canvas.style.opacity=visible?'1':'0';ctx.clearRect(0,0,w,h);const centerY=visible?r.top+(r.height-90)*.5:h*.53;const scale=mobile?w*.34:Math.min(w*.27,r.height*.38);const fade=visible?1:.42;
 for(const star of stars){const p=project(star,visible?centerY:h*.5,Math.max(w,h)*.36);if(p.x<0||p.x>w||p.y<0||p.y>h)continue;ctx.beginPath();ctx.arc(p.x,p.y,(star.r*.9+.25)*p.f,0,7);ctx.fillStyle=`rgba(235,235,235,${clamp((p.z+2.2)/5,.15,.8)*fade})`;ctx.fill()}
 const projected=full.map(p=>project(p,centerY,scale));
 // Mobile uses stable readable label rows, connected into the spatial field.
-for(let i=0;i<data.length;i++){let p=projected[field.length+i];if(!visible&&!mobile){p=project(serviceWorld[i],centerY,scale);projected[field.length+i]=p}const b=buttons[i];if(mobile){p.x=data[i][5]*w;p.y=r.top+70+data[i][6]*(r.height-180);p.z=0;p.f=1}const half=b.offsetWidth/2+16;p.x=clamp(p.x,half,w-half);if(!mobile)p.y=clamp(p.y,r.top+100,r.bottom-170);b.style.left=p.x+'px';b.style.top=(p.y-r.top)+'px';b.style.fontSize=mobile?(data[i][7]?20:12)+'px':clamp((data[i][7]?26:15)*p.f,data[i][7]?23:13,data[i][7]?34:20)+'px';}
+for(let i=0;i<data.length;i++){let p=projected[field.length+i];if(!visible&&!mobile){p=project(serviceWorld[i],centerY,scale);projected[field.length+i]=p}const b=buttons[i];if(mobile){p.x=data[i][5]*w;p.y=r.top+110+data[i][6]*(r.height-280);p.z=0;p.f=1}const half=b.offsetWidth/2+16;p.x=clamp(p.x,half,w-half);if(!mobile)p.y=clamp(p.y,r.top+100,r.bottom-170);b.style.left=p.x+'px';b.style.top=(p.y-r.top)+'px';const depth=clamp((p.z+1.5)/3,0,1);b.style.fontSize=(mobile?(data[i][7]?20:14):(data[i][7]?24:14+10*depth))+'px';b.style.setProperty('--space-opacity',mobile?1:.32+.68*depth);b.style.zIndex=String(Math.round(depth*10)+1);}
 for(const [i,j]of edges){const a=projected[i],b=projected[j];if((a.y<0&&b.y<0)||(a.y>h&&b.y>h))continue;const alpha=clamp((a.z+b.z+3.8)/23,.05,.25)*fade;line(a,b,`rgba(205,205,205,${alpha})`,.55)}
 for(let i=0;i<projected.length;i++){const p=projected[i];if(p.x<0||p.x>w||p.y<0||p.y>h)continue;ctx.beginPath();ctx.arc(p.x,p.y,i>=field.length?2:clamp(p.f,.6,1.7),0,7);ctx.fillStyle=`rgba(230,230,230,${i>=field.length?.8:.4*fade})`;ctx.fill()}
 // Cursor leaves sparse geometric impressions on dark surfaces and a fluid ribbon on light ones.
@@ -69,3 +69,6 @@ updateProjectScroll();
 document.querySelectorAll('[data-social-pending]').forEach(b=>b.addEventListener('click',()=>{document.querySelector('.social-status').hidden=false}));
 
 function sectionDrift(){if(!paused)document.querySelectorAll('.project-heading h2,.number-intro h2,.method-heading h2,.team-heading h2').forEach(el=>{const rect=el.parentElement.getBoundingClientRect();const y=Math.max(-14,Math.min(24,(rect.top-innerHeight*.4)*.055));el.style.setProperty('--heading-y',y+'px')})}addEventListener('scroll',sectionDrift,{passive:true});sectionDrift();
+
+// One expanded category at a time; collapsed media stops immediately.
+document.querySelectorAll('.work-item').forEach(item=>item.addEventListener('toggle',()=>{if(item.open)document.querySelectorAll('.work-item').forEach(other=>{if(other!==item)other.open=false});else item.querySelectorAll('video').forEach(v=>v.pause())}));
