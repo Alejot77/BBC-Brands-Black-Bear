@@ -21,3 +21,9 @@ Los perfiles y algunos proyectos son ejemplos identificados en el sitio. Faltan 
 Home: dist/index.html, dist/app.js y dist/home-review.css.
 Internas: dist/nosotros/index.html, dist/contacto/index.html, dist/inner.js y dist/inner-review.css.
 Estilos base: dist/style.css. Recursos: dist/assets.
+
+
+## Perfiles y música del equipo
+`dist/team-profiles.json` contiene seis espacios pendientes de información aprobada: nombre, cargo, biografía, fotografía, LinkedIn y URL de playlist. No se han inventado datos personales. `team-profiles.js` integra los campos confirmados en las tarjetas existentes. Los enlaces musicales se abren sólo al pulsarlos, sin reproducción automática.
+
+Para ingeniería: esta versión admite enlaces HTTPS a playlists por perfil, sin backend adicional. Un reproductor embebido requiere seleccionar proveedor y revisar sus requisitos, consentimiento, accesibilidad y comportamiento en móvil; no está implementado. No se ha contactado a un ingeniero. Confirmar las URLs, permisos de fotografías y biografías antes de completar la configuración.
