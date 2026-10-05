@@ -1,8 +1,9 @@
 (()=>{
- const nav=document.querySelector('.quiet-nav');if(!nav)return;
- let previous=scrollY,queued=false;
- function update(){const current=scrollY;const down=current>previous+4,up=current<previous-4;if(down&&current>120&&!nav.contains(document.activeElement))nav.classList.add('is-hidden');if(up||current<120)nav.classList.remove('is-hidden');previous=current;queued=false}
- addEventListener('scroll',()=>{if(!queued){queued=true;requestAnimationFrame(update)}},{passive:true});
- nav.addEventListener('focusin',()=>nav.classList.remove('is-hidden'));
- document.addEventListener('pointermove',e=>{if(e.clientY<110)nav.classList.remove('is-hidden')},{passive:true});
+ const button=document.querySelector('.header-whatsapp');
+ const note=document.querySelector('#header-whatsapp-note');
+ if(!button||!note)return;
+ const close=()=>{note.hidden=true;button.setAttribute('aria-expanded','false')};
+ button.addEventListener('click',()=>{const open=note.hidden;note.hidden=!open;button.setAttribute('aria-expanded',String(open))});
+ document.addEventListener('keydown',event=>{if(event.key==='Escape')close()});
+ document.addEventListener('click',event=>{if(!button.contains(event.target)&&!note.contains(event.target))close()});
 })();

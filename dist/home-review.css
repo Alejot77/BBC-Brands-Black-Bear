@@ -39,21 +39,21 @@
 }
 /* Scoped corrections: keep the canvas above the page background, below content. */
 /* Permanent corner symbols, with only the lettering revealed alongside. */
-:is(.home-page,.site-shell)>header { opacity:1; visibility:visible; transform:none; pointer-events:none; z-index:110; background:transparent; backdrop-filter:none; -webkit-backdrop-filter:none; }
-:is(.home-page,.site-shell)>header a,:is(.home-page,.site-shell)>header nav { pointer-events:auto; }
-:is(.home-page,.site-shell)>header nav { padding:14px 22px; border-radius:100px; background:linear-gradient(140deg,#ffffff12,#ffffff05),#12121250; border:1px solid #ffffff24; backdrop-filter:blur(18px) saturate(125%); -webkit-backdrop-filter:blur(18px) saturate(125%); box-shadow:inset 0 1px 0 #ffffff10,0 5px 24px #00000012; }
+:is(.home-page,.site-shell)>header:not(.brand-navigation) { opacity:1; visibility:visible; transform:none; pointer-events:none; z-index:110; background:transparent; backdrop-filter:none; -webkit-backdrop-filter:none; }
+:is(.home-page,.site-shell)>header:not(.brand-navigation) a,:is(.home-page,.site-shell)>header:not(.brand-navigation) nav { pointer-events:auto; }
+:is(.home-page,.site-shell)>header:not(.brand-navigation) nav { padding:14px 22px; border-radius:100px; background:linear-gradient(140deg,#ffffff12,#ffffff05),#12121250; border:1px solid #ffffff24; backdrop-filter:blur(18px) saturate(125%); -webkit-backdrop-filter:blur(18px) saturate(125%); box-shadow:inset 0 1px 0 #ffffff10,0 5px 24px #00000012; }
 :is(.home-page,.site-shell) #cursor { z-index:122; }
 :is(.home-page,.site-shell) #gestures { z-index:121; }
-:is(.home-page,.site-shell)>header .brand-motion { position:relative; width:190px; justify-content:flex-start; flex-shrink:0; }
-:is(.home-page,.site-shell)>header .brand-motion-bbc { justify-content:flex-end; }
-:is(.home-page,.site-shell)>header .brand-motion-symbol { order:0; margin:0; }
-:is(.home-page,.site-shell)>header .brand-motion-bbc .brand-motion-symbol { order:2; }
-:is(.home-page,.site-shell)>header .brand-motion-name { position:absolute; left:56px; top:0; margin:0; height:48px; width:120px; opacity:0; clip-path:none; transform:translateX(-8px); transition:transform .85s cubic-bezier(.22,1,.36,1),opacity .65s ease; }
-:is(.home-page,.site-shell)>header .brand-motion-bbc .brand-motion-name { left:auto; right:56px; clip-path:none; transform:translateX(8px); }
-:is(.home-page,.site-shell)>header .brand-motion-name img { width:105px!important; height:43px!important; object-position:left center; margin:0; }
-:is(.home-page,.site-shell)>header .brand-motion-bbc .brand-motion-name img { width:120px!important; object-position:right center; }
-:is(.home-page,.site-shell)>header .brand-motion:hover .brand-motion-name,
-:is(.home-page,.site-shell)>header .brand-motion:focus-visible .brand-motion-name { width:120px; opacity:1; clip-path:inset(0); transform:none; }
+:is(.home-page,.site-shell)>header:not(.brand-navigation) .brand-motion { position:relative; width:190px; justify-content:flex-start; flex-shrink:0; }
+:is(.home-page,.site-shell)>header:not(.brand-navigation) .brand-motion-bbc { justify-content:flex-end; }
+:is(.home-page,.site-shell)>header:not(.brand-navigation) .brand-motion-symbol { order:0; margin:0; }
+:is(.home-page,.site-shell)>header:not(.brand-navigation) .brand-motion-bbc .brand-motion-symbol { order:2; }
+:is(.home-page,.site-shell)>header:not(.brand-navigation) .brand-motion-name { position:absolute; left:56px; top:0; margin:0; height:48px; width:120px; opacity:0; clip-path:none; transform:translateX(-8px); transition:transform .85s cubic-bezier(.22,1,.36,1),opacity .65s ease; }
+:is(.home-page,.site-shell)>header:not(.brand-navigation) .brand-motion-bbc .brand-motion-name { left:auto; right:56px; clip-path:none; transform:translateX(8px); }
+:is(.home-page,.site-shell)>header:not(.brand-navigation) .brand-motion-name img { width:105px!important; height:43px!important; object-position:left center; margin:0; }
+:is(.home-page,.site-shell)>header:not(.brand-navigation) .brand-motion-bbc .brand-motion-name img { width:120px!important; object-position:right center; }
+:is(.home-page,.site-shell)>header:not(.brand-navigation) .brand-motion:hover .brand-motion-name,
+:is(.home-page,.site-shell)>header:not(.brand-navigation) .brand-motion:focus-visible .brand-motion-name { width:120px; opacity:1; clip-path:inset(0); transform:none; }
 :is(.home-page,.site-shell) #universo { height:clamp(680px,85svh,880px); min-height:0; }
 :is(.home-page,.site-shell) #universo .universe-bottom { bottom:40px; }
 :is(.home-page,.site-shell) #marcas { padding-top:122.4px; padding-bottom:122.4px; }
@@ -72,12 +72,12 @@
 :is(.home-page,.site-shell) .project-tv:last-of-type { margin-bottom:0; }
 :is(.home-page,.site-shell) .project-tv .tv-screen { min-height:0; height:clamp(360px,65svh,650px); }
 @media(max-width:800px) {
- :is(.home-page,.site-shell)>header { height:76px; padding:0 4vw; }
- :is(.home-page,.site-shell)>header .brand-motion { width:44px; height:42px; }
- :is(.home-page,.site-shell)>header nav { order:0; gap:10px; padding:12px 13px; }
- :is(.home-page,.site-shell)>header nav a { font-size:9px; letter-spacing:0; }
- :is(.home-page,.site-shell)>header .brand-motion-name { top:44px; left:0; height:44px; background:transparent; }
- :is(.home-page,.site-shell)>header .brand-motion-bbc .brand-motion-name { right:0; left:auto; }
+ :is(.home-page,.site-shell)>header:not(.brand-navigation) { height:76px; padding:0 4vw; }
+ :is(.home-page,.site-shell)>header:not(.brand-navigation) .brand-motion { width:44px; height:42px; }
+ :is(.home-page,.site-shell)>header:not(.brand-navigation) nav { order:0; gap:10px; padding:12px 13px; }
+ :is(.home-page,.site-shell)>header:not(.brand-navigation) nav a { font-size:9px; letter-spacing:0; }
+ :is(.home-page,.site-shell)>header:not(.brand-navigation) .brand-motion-name { top:44px; left:0; height:44px; background:transparent; }
+ :is(.home-page,.site-shell)>header:not(.brand-navigation) .brand-motion-bbc .brand-motion-name { right:0; left:auto; }
  :is(.home-page,.site-shell) #universo { height:780px; }
  :is(.home-page,.site-shell) #marcas { padding-top:93.6px; padding-bottom:93.6px; }
  :is(.home-page,.site-shell) .project-tv { top:calc(86px + var(--stack-index,0)*12px); margin-bottom:12vh; }
@@ -115,11 +115,11 @@
  .home-page #marcas:after{width:65vw;height:55vw}
 }
 @media(max-width:600px){
- :is(.home-page,.site-shell)>header{height:106px!important;align-items:flex-start;padding-top:10px!important}
- :is(.home-page,.site-shell)>header nav{position:absolute!important;top:62px;left:50%;transform:translateX(-50%);width:max-content;max-width:94vw;gap:14px!important;padding:12px 16px!important}
- :is(.home-page,.site-shell)>header .brand-motion-name{top:0!important}
- :is(.home-page,.site-shell)>header .brand-motion-bear .brand-motion-name{left:48px!important}
- :is(.home-page,.site-shell)>header .brand-motion-bbc .brand-motion-name{right:60px!important}
+ :is(.home-page,.site-shell)>header:not(.brand-navigation){height:106px!important;align-items:flex-start;padding-top:10px!important}
+ :is(.home-page,.site-shell)>header:not(.brand-navigation) nav{position:absolute!important;top:62px;left:50%;transform:translateX(-50%);width:max-content;max-width:94vw;gap:14px!important;padding:12px 16px!important}
+ :is(.home-page,.site-shell)>header:not(.brand-navigation) .brand-motion-name{top:0!important}
+ :is(.home-page,.site-shell)>header:not(.brand-navigation) .brand-motion-bear .brand-motion-name{left:48px!important}
+ :is(.home-page,.site-shell)>header:not(.brand-navigation) .brand-motion-bbc .brand-motion-name{right:60px!important}
  :is(.home-page,.site-shell) .home-footer-directory{grid-template-columns:1.1fr 1fr 1fr;gap:12px}
  :is(.home-page,.site-shell) .social-icons{gap:10px}
  :is(.home-page,.site-shell) .social-icon{width:20px;height:20px}
@@ -127,9 +127,9 @@
  :is(.home-page,.site-shell) .footer-open-bottom{gap:12px}
  :is(.home-page,.site-shell) .footer-signature{min-width:0;overflow-wrap:anywhere}
 }
-:is(.home-page,.site-shell)>header .brand-motion-bbc .brand-motion-symbol{width:62px;flex-basis:62px}
-:is(.home-page,.site-shell)>header .brand-motion-bbc .brand-motion-symbol img{width:60px!important;height:43px!important;max-width:none}
-:is(.home-page,.site-shell)>header .brand-motion-bbc .brand-motion-name{right:72px}
+:is(.home-page,.site-shell)>header:not(.brand-navigation) .brand-motion-bbc .brand-motion-symbol{width:62px;flex-basis:62px}
+:is(.home-page,.site-shell)>header:not(.brand-navigation) .brand-motion-bbc .brand-motion-symbol img{width:60px!important;height:43px!important;max-width:none}
+:is(.home-page,.site-shell)>header:not(.brand-navigation) .brand-motion-bbc .brand-motion-name{right:72px}
 :is(.home-page,.site-shell) .home-footer{position:relative;isolation:isolate;overflow:hidden;padding-top:85px!important}
 :is(.home-page,.site-shell) .home-footer-top{display:flex;justify-content:flex-end;min-height:150px}
 :is(.home-page,.site-shell) .home-footer-directory{width:40%;position:relative;z-index:1}
@@ -138,9 +138,9 @@
 :is(.home-page,.site-shell) .home-footer-marks img:last-child{top:auto;left:auto;right:2vw;bottom:-30px;width:23vw;height:26vw;opacity:.1;transform:rotate(12deg)}
 :is(.home-page,.site-shell) .home-footer-statement,:is(.home-page,.site-shell) .footer-open-bottom{position:relative;z-index:1}
 @media(max-width:800px){
- :is(.home-page,.site-shell)>header .brand-motion-bbc .brand-motion-symbol{width:54px;flex-basis:54px}
- :is(.home-page,.site-shell)>header .brand-motion-bbc .brand-motion-symbol img{width:53px!important;height:38px!important}
- :is(.home-page,.site-shell)>header .brand-motion-bbc .brand-motion-name{right:0}
+ :is(.home-page,.site-shell)>header:not(.brand-navigation) .brand-motion-bbc .brand-motion-symbol{width:54px;flex-basis:54px}
+ :is(.home-page,.site-shell)>header:not(.brand-navigation) .brand-motion-bbc .brand-motion-symbol img{width:53px!important;height:38px!important}
+ :is(.home-page,.site-shell)>header:not(.brand-navigation) .brand-motion-bbc .brand-motion-name{right:0}
  :is(.home-page,.site-shell) .home-footer-directory{width:100%}
  :is(.home-page,.site-shell) .home-footer-marks img{width:55vw;height:45vw;opacity:.07}
  :is(.home-page,.site-shell) .home-footer-marks img:last-child{width:45vw;height:50vw;opacity:.07}
@@ -153,8 +153,8 @@
 .home-page #marcas .client-stage{transform:none;position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:32px;width:100%;margin-inline:auto}
 .home-page #marcas .client-logo-window{flex:none;width:clamp(160px,22vw,300px);height:100px;margin-inline:auto}
 .home-page #marcas .client-stage h2{text-align:center}
-:is(.home-page,.site-shell)>header .brand-motion-bear .brand-motion-symbol img{width:47.3px!important;height:47.3px!important;max-width:none}
-:is(.home-page,.site-shell)>header .brand-motion-bear .brand-motion-name{left:60px}
+:is(.home-page,.site-shell)>header:not(.brand-navigation) .brand-motion-bear .brand-motion-symbol img{width:47.3px!important;height:47.3px!important;max-width:none}
+:is(.home-page,.site-shell)>header:not(.brand-navigation) .brand-motion-bear .brand-motion-name{left:60px}
 :is(.home-page,.site-shell) .home-footer{overflow:visible}
 :is(.home-page,.site-shell) .home-footer-marks img{transform:none!important;top:-35px}
 :is(.home-page,.site-shell) .home-footer-marks img:last-child{transform:none!important;bottom:0}
@@ -165,6 +165,6 @@
 .brand-intro-stage img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;filter:invert(1);opacity:0;animation:full-brand-fade 1.3s ease both}
 .brand-intro-stage img:last-child{animation-delay:1.4s}
 @keyframes full-brand-fade{0%{opacity:0;transform:translateY(16px)}25%,70%{opacity:1;transform:translateY(0)}100%{opacity:0;transform:translateY(-12px)}}
-@media(max-width:800px){:is(.home-page,.site-shell)>header .brand-motion-bear .brand-motion-symbol img{width:41.8px!important;height:41.8px!important}}
-@media(max-width:600px){:is(.home-page,.site-shell)>header .brand-motion-bear .brand-motion-name{left:52px!important}}
+@media(max-width:800px){:is(.home-page,.site-shell)>header:not(.brand-navigation) .brand-motion-bear .brand-motion-symbol img{width:41.8px!important;height:41.8px!important}}
+@media(max-width:600px){:is(.home-page,.site-shell)>header:not(.brand-navigation) .brand-motion-bear .brand-motion-name{left:52px!important}}
 @media(prefers-reduced-motion:reduce){.brand-entrance{display:none}.brand-intro-stage img{animation:none}}

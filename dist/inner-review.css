@@ -1,8 +1,8 @@
-.site-shell>header{position:fixed;top:0;height:70px;padding:0 2.6vw;background:transparent!important;backdrop-filter:none!important;display:flex;justify-content:space-between}
-.site-shell>header nav{display:flex!important;gap:24px!important;font-size:10px!important;letter-spacing:.12em;text-transform:uppercase;background:linear-gradient(140deg,#ffffff12,#ffffff05),#12121250!important;padding:14px 22px!important;border-radius:100px!important}
-.site-shell>header .brand{display:flex!important}
-.site-shell>header .brand img{filter:invert(1)!important}
-.site-shell>header nav a[aria-current=page]{color:#bfff0a}
+.site-shell>header:not(.brand-navigation){position:fixed;top:0;height:70px;padding:0 2.6vw;background:transparent!important;backdrop-filter:none!important;display:flex;justify-content:space-between}
+.site-shell>header:not(.brand-navigation) nav{display:flex!important;gap:24px!important;font-size:10px!important;letter-spacing:.12em;text-transform:uppercase;background:linear-gradient(140deg,#ffffff12,#ffffff05),#12121250!important;padding:14px 22px!important;border-radius:100px!important}
+.site-shell>header:not(.brand-navigation) .brand{display:flex!important}
+.site-shell>header:not(.brand-navigation) .brand img{filter:invert(1)!important}
+.site-shell>header:not(.brand-navigation) nav a[aria-current=page]{color:#bfff0a}
 .site-shell .home-footer{background:#000;color:#fff}
 .site-shell .manifesto h1,.site-shell .manifesto h1>span{font-weight:600}
 .site-shell .manifesto-bottom>p{font-size:clamp(18px,1.75vw,28px);line-height:1.45;max-width:460px}
@@ -34,9 +34,9 @@
 .site-shell .team-controls button:hover{background:#fff;color:#000}
 .site-shell .team-position{font-size:14px;font-variant-numeric:tabular-nums}
 @media(max-width:800px){
- .site-shell>header{height:76px;padding:0 4vw}
- .site-shell>header nav{gap:10px!important;padding:12px 13px!important}
- .site-shell>header nav a{font-size:9px!important}
+ .site-shell>header:not(.brand-navigation){height:76px;padding:0 4vw}
+ .site-shell>header:not(.brand-navigation) nav{gap:10px!important;padding:12px 13px!important}
+ .site-shell>header:not(.brand-navigation) nav a{font-size:9px!important}
  .site-shell .manifesto-mark{position:relative;top:auto;right:auto;width:65%;margin:35px 0 0;gap:25px}
  .site-shell .manifesto-mark .manifesto-symbol{height:70px}
  .site-shell .manifesto-bottom>p{font-size:20px}

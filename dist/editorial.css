@@ -1,12 +1,12 @@
 /* Editorial hierarchy: strong headlines, quiet navigation and supporting copy. */
 body{padding-bottom:94px}
-:is(.home-page,.site-shell)>header{position:absolute!important;top:0!important;height:80px!important;padding:18px 4vw!important;align-items:flex-start!important}
-:is(.home-page,.site-shell)>header .brand-motion{width:100px!important;height:32px!important;opacity:.65}
-:is(.home-page,.site-shell)>header .brand-motion .brand-motion-symbol img{height:28px!important;width:auto!important;max-width:42px!important}
-:is(.home-page,.site-shell)>header .brand-motion .brand-motion-name{display:none}
-:is(.home-page,.site-shell)>header nav{position:fixed!important;top:auto!important;bottom:calc(20px + env(safe-area-inset-bottom));left:50%!important;transform:translateX(-50%)!important;display:flex;width:max-content;max-width:94vw;gap:24px!important;padding:15px 24px!important;background:#141414e8!important;border:1px solid #ffffff18!important;box-shadow:0 5px 25px #0003!important}
-:is(.home-page,.site-shell)>header nav a{font-size:14px!important;font-weight:400!important;text-transform:none!important;letter-spacing:0!important;color:#bdbdbd}
-:is(.home-page,.site-shell)>header nav a:hover,:is(.home-page,.site-shell)>header nav a:focus-visible{color:#fff}
+:is(.home-page,.site-shell)>header:not(.brand-navigation){position:absolute!important;top:0!important;height:80px!important;padding:18px 4vw!important;align-items:flex-start!important}
+:is(.home-page,.site-shell)>header:not(.brand-navigation) .brand-motion{width:100px!important;height:32px!important;opacity:.65}
+:is(.home-page,.site-shell)>header:not(.brand-navigation) .brand-motion .brand-motion-symbol img{height:28px!important;width:auto!important;max-width:42px!important}
+:is(.home-page,.site-shell)>header:not(.brand-navigation) .brand-motion .brand-motion-name{display:none}
+:is(.home-page,.site-shell)>header:not(.brand-navigation) nav{position:fixed!important;top:auto!important;bottom:calc(20px + env(safe-area-inset-bottom));left:50%!important;transform:translateX(-50%)!important;display:flex;width:max-content;max-width:94vw;gap:24px!important;padding:15px 24px!important;background:#141414e8!important;border:1px solid #ffffff18!important;box-shadow:0 5px 25px #0003!important}
+:is(.home-page,.site-shell)>header:not(.brand-navigation) nav a{font-size:14px!important;font-weight:400!important;text-transform:none!important;letter-spacing:0!important;color:#bdbdbd}
+:is(.home-page,.site-shell)>header:not(.brand-navigation) nav a:hover,:is(.home-page,.site-shell)>header:not(.brand-navigation) nav a:focus-visible{color:#fff}
 :is(.home-page,.site-shell) .home-footer-directory nav{font-size:14px!important;font-weight:400!important;text-transform:none!important;line-height:1.8}
 :is(.home-page,.site-shell) .home-footer-directory nav a{font-weight:400!important;color:#aaa}
 :is(.home-page,.site-shell) .home-footer-directory h2{font-size:12px!important;font-weight:400!important;letter-spacing:.08em;color:#777}
@@ -38,12 +38,12 @@ body{padding-bottom:94px}
 .home-page .work-content .project-tv{position:relative!important;top:auto!important;margin:0!important;transform:none!important;filter:none!important;box-shadow:none!important}
 .home-page .work-content .project-copy h3{font-size:clamp(28px,4vw,64px);font-weight:500}.home-page .work-content .case-readout strong{font-size:clamp(22px,2.5vw,38px);font-weight:400}
 @media(max-width:800px){.home-page #universo .universe-bottom{bottom:95px}.home-page .extra-stats{display:grid;grid-template-columns:1fr 1fr;gap:28px}.home-page .number-intro{gap:24px}.work-item summary{gap:14px;padding:24px 0}.closing-socials{gap:32px}.home-page .work-content .tv-screen{min-height:360px!important}.home-page .work-content .case-readout{display:none}}
-@media(max-width:600px){:is(.home-page,.site-shell)>header nav{gap:18px!important;padding:14px 18px!important}:is(.home-page,.site-shell)>header nav a{font-size:13px!important}#whatsapp-float{bottom:90px!important}.home-page .extra-stats{grid-template-columns:1fr 1fr}.home-page .extra-stats span{font-size:14px}.work-item summary h3{font-size:20px}.contact-shell .contact-intro h1{font-size:clamp(36px,8vw,48px)}}
-/* Independent fixed navigation avoids the transformed header containing block. */
+@media(max-width:600px){:is(.home-page,.site-shell)>header:not(.brand-navigation) nav{gap:18px!important;padding:14px 18px!important}:is(.home-page,.site-shell)>header:not(.brand-navigation) nav a{font-size:13px!important}#whatsapp-float{bottom:90px!important}.home-page .extra-stats{grid-template-columns:1fr 1fr}.home-page .extra-stats span{font-size:14px}.work-item summary h3{font-size:20px}.contact-shell .contact-intro h1{font-size:clamp(36px,8vw,48px)}}
+/* Independent fixed navigation avoids the transformed header:not(.brand-navigation) containing block. */
 .quiet-nav{position:fixed;z-index:130;left:50%;bottom:calc(18px + env(safe-area-inset-bottom));transform:translateX(-50%);display:flex;align-items:center;gap:24px;padding:14px 24px;max-width:94vw;border:1px solid #ffffff18;border-radius:40px;background:#111e;backdrop-filter:blur(16px);transition:transform .3s ease,opacity .3s ease}
 .quiet-nav a{font-size:14px;font-weight:400;text-transform:none;letter-spacing:0;color:#b8b8b8;white-space:nowrap;text-decoration:none}.quiet-nav a:hover,.quiet-nav a:focus-visible,.quiet-nav a.active{color:#d2ff00}
 .quiet-nav.is-hidden{transform:translate(-50%,calc(100% + 36px));opacity:0;pointer-events:none}.quiet-nav:focus-within{transform:translateX(-50%);opacity:1;pointer-events:auto}
-:is(.home-page,.site-shell)>header.quiet-brand-header{position:absolute!important;display:block!important;transform:none!important;height:auto!important;padding:24px 4vw!important;background:none!important;backdrop-filter:none!important}
+:is(.home-page,.site-shell)>header:not(.brand-navigation).quiet-brand-header{position:absolute!important;display:block!important;transform:none!important;height:auto!important;padding:24px 4vw!important;background:none!important;backdrop-filter:none!important}
 .quiet-brand-pair{display:flex;align-items:center;gap:24px;width:max-content;opacity:.65}.quiet-brand-pair a{display:block;pointer-events:auto}.quiet-brand-pair img{height:27px;width:auto;filter:invert(1)}
 :is(.home-page,.site-shell) .home-footer,:is(.home-page,.site-shell) .home-footer-directory h2,:is(.home-page,.site-shell) .footer-open-bottom{border:0!important;box-shadow:none!important}
 .home-page .project-heading h2{text-transform:uppercase;font-weight:600}.home-page #proyectos{padding-top:150px;padding-bottom:140px}.home-page #cifras{padding-top:130px;padding-bottom:130px}
@@ -132,3 +132,182 @@ body{padding-bottom:94px}
 .quiet-nav:focus-within{transform:none;opacity:1;pointer-events:auto}
 .contact-shell .quiet-nav{background:linear-gradient(130deg,#ffffff70,#ffffff20),#20202070}
 @media(max-width:600px){.quiet-nav{top:64px;right:16px;gap:12px;padding:10px 13px}.quiet-nav a{font-size:10px}.quiet-brand-header{top:16px}.contact-layout{padding-top:108px}.contact-intro{padding-top:24px}}
+
+/* October review: unified, permanently fixed navigation and monochrome hero. */
+.brand-navigation{position:fixed;inset:20px 3vw auto;z-index:160;display:grid;gap:8px;pointer-events:none;transform:none}
+.brand-navigation>*{pointer-events:auto}
+.brand-announcement{min-height:32px;padding:5px 18px;display:flex;align-items:center;justify-content:center;gap:18px;background:#d1ff00;color:#080808;border-radius:10px}
+.brand-announcement p{font-size:12px;line-height:1.3;margin:0;text-transform:uppercase;font-weight:400}
+.brand-announcement strong{font-weight:600}
+.header-whatsapp{display:inline-flex;align-items:center;justify-content:center;gap:7px;min-height:24px;padding:3px 14px;background:#111;color:#fff;border:0;border-radius:0;font:400 11px/1.2 Franie,sans-serif;cursor:pointer}
+.header-whatsapp svg{width:13px;height:13px}
+.brand-nav-container{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:16px 24px;border:1px solid #ffffff42;border-radius:11px;background:linear-gradient(140deg,#ffffff13,#ffffff04),#262626b8;backdrop-filter:blur(22px);-webkit-backdrop-filter:blur(22px);box-shadow:inset 0 1px 0 #ffffff0b}
+.brand-navigation .quiet-brand-pair{display:flex;align-items:center;gap:22px;margin:0;padding:0;border:0}
+.brand-navigation .quiet-brand-pair a{display:flex;opacity:.85;transition:opacity .2s}
+.brand-navigation .quiet-brand-pair a:hover{opacity:1}
+.brand-navigation .quiet-brand-pair img{display:block;width:104px;height:34px;object-fit:contain;filter:brightness(0) invert(1);transform:none;opacity:1}
+.brand-navigation .quiet-brand-pair a:first-child img{width:83px;height:34px}
+.brand-navigation .quiet-nav,.contact-shell .brand-navigation .quiet-nav{position:static;inset:auto;display:flex;flex-wrap:wrap;justify-content:flex-end;gap:20px;max-width:none;padding:0;border:0;border-radius:0;box-shadow:none;background:none;backdrop-filter:none;-webkit-backdrop-filter:none;transform:none;opacity:1;pointer-events:auto;transition:none}
+.brand-navigation .quiet-nav a{font-size:12px;font-weight:400;color:#eee;line-height:1.5;letter-spacing:0}
+.brand-navigation .quiet-nav a:hover,.brand-navigation .quiet-nav a[aria-current=page]{color:#d1ff00}
+.brand-navigation a:focus-visible,.header-whatsapp:focus-visible{outline:2px solid #fff;outline-offset:5px}
+.header-whatsapp-note{justify-self:end;max-width:330px;margin:0;padding:18px;background:#181818;border:1px solid #555;border-radius:10px;color:#fff;font-size:14px;line-height:1.6}
+.header-whatsapp-note[hidden]{display:none}.header-whatsapp-note a{color:#d1ff00}
+.home-page .hero{position:relative;isolation:isolate;min-height:100svh;display:flex;align-items:flex-end;padding:180px 5vw 7vh}
+.home-page .hero .hero-film{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:grayscale(1);z-index:-2}
+.home-page .hero:after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,#0003 0%,transparent 35%,#0008 100%);pointer-events:none;z-index:-1}
+.home-page .home-hero-title{display:block;margin:0;position:relative;color:#fff;font-size:clamp(64px,8.8vw,150px);line-height:.96;letter-spacing:-.055em;max-width:90%;text-transform:uppercase;text-align:left}
+.home-page .home-hero-title span{display:block;font-weight:400}.home-page .home-hero-title strong{display:block;font-weight:700}
+html{scroll-padding-top:140px}
+.contact-shell .contact-layout{padding-top:145px}
+@media(max-width:800px){.brand-navigation{inset:14px 16px auto;gap:6px}.brand-nav-container{padding:13px 16px;gap:14px}.brand-navigation .quiet-brand-pair{gap:13px}.brand-navigation .quiet-brand-pair img{width:87px;height:29px}.brand-navigation .quiet-brand-pair a:first-child img{width:70px;height:29px}.brand-navigation .quiet-nav{gap:12px}.brand-navigation .quiet-nav a{font-size:11px}.home-page .home-hero-title{font-size:clamp(62px,11vw,100px)}}
+@media(max-width:600px){.brand-navigation{inset:10px 12px auto}.brand-announcement{padding:6px 9px;gap:9px}.brand-announcement p{font-size:10px}.header-whatsapp{padding:4px 8px;font-size:10px}.brand-nav-container{flex-direction:column;gap:13px;padding:12px}.brand-navigation .quiet-nav{width:100%;justify-content:space-between;gap:8px}.brand-navigation .quiet-nav a{font-size:10px}.brand-navigation .quiet-brand-pair img{height:27px;width:84px}.brand-navigation .quiet-brand-pair a:first-child img{height:27px;width:67px}.home-page .hero{padding:190px 6vw 9vh}.home-page .home-hero-title{font-size:clamp(52px,13.4vw,80px);max-width:100%;line-height:1.02}.contact-shell .contact-layout{padding-top:170px}html{scroll-padding-top:170px}}
+.home-page .hero{flex-direction:column;justify-content:flex-end;align-items:flex-start}
+.home-page .home-hero-title strong{color:#fff}
+/* v20: isolate the unified header from legacy header/nav selectors. */
+body.home-page>header.brand-navigation,body.site-shell>header.brand-navigation{position:fixed;top:20px;left:4.5vw;right:4.5vw;bottom:auto;width:auto;height:auto;max-width:none;display:grid;grid-template-columns:minmax(0,1fr);align-items:stretch;justify-content:stretch;padding:0;margin:0;gap:8px;background:transparent;backdrop-filter:none;-webkit-backdrop-filter:none;opacity:1;visibility:visible;transform:none;transition:none;pointer-events:none;z-index:160}
+body .brand-navigation .brand-announcement,body .brand-navigation .brand-nav-container{width:100%;min-width:0;box-sizing:border-box}
+body .brand-navigation .brand-nav-container{display:flex;flex-direction:row;align-items:center;justify-content:space-between;min-height:64px;padding:13px 24px}
+body .brand-navigation .quiet-brand-pair{position:static;flex:0 0 auto;opacity:1;visibility:visible}
+body.home-page>header.brand-navigation nav.quiet-nav,body.site-shell>header.brand-navigation nav.quiet-nav{position:static;inset:auto;order:0;display:flex;flex:0 1 auto;align-items:center;justify-content:flex-end;width:auto;height:auto;max-width:none;margin:0 0 0 auto;padding:0;gap:22px;background:transparent;border:0;border-radius:0;box-shadow:none;backdrop-filter:none;-webkit-backdrop-filter:none;transform:none;opacity:1;visibility:visible;pointer-events:auto}
+body.home-page>header.brand-navigation nav.quiet-nav>a,body.site-shell>header.brand-navigation nav.quiet-nav>a{font-size:12px;line-height:1.5;font-weight:400;text-transform:uppercase;letter-spacing:0}
+.home-page .home-hero-title,.home-page .home-hero-title span,.home-page .home-hero-title strong{font-weight:600}
+.home-page .home-hero-title span{color:#d1ff00}
+.home-page .home-hero-title strong{color:#fff}
+@media(max-width:800px){body.home-page>header.brand-navigation,body.site-shell>header.brand-navigation{top:14px;left:16px;right:16px}body .brand-navigation .brand-nav-container{padding:12px 16px}body.home-page>header.brand-navigation nav.quiet-nav,body.site-shell>header.brand-navigation nav.quiet-nav{gap:12px}body.home-page>header.brand-navigation nav.quiet-nav>a,body.site-shell>header.brand-navigation nav.quiet-nav>a{font-size:11px}}
+@media(max-width:600px){body.home-page>header.brand-navigation,body.site-shell>header.brand-navigation{top:10px;left:12px;right:12px;gap:6px}body .brand-navigation .brand-nav-container{flex-direction:column;gap:12px;padding:12px}body.home-page>header.brand-navigation nav.quiet-nav,body.site-shell>header.brand-navigation nav.quiet-nav{width:100%;margin:0;justify-content:space-between;gap:8px}body.home-page>header.brand-navigation nav.quiet-nav>a,body.site-shell>header.brand-navigation nav.quiet-nav>a{font-size:10px}}
+
+/* v21: quieter hero and service detail dialogs. */
+.home-page .home-hero-title{font-size:clamp(48px,6.2vw,100px);line-height:1.02}
+.home-page .home-hero-title span,.home-page .home-hero-title strong{color:#fff;font-weight:600}
+.home-page .universe-experience{margin:0;color:#fff;font-size:clamp(22px,2.4vw,38px);line-height:1.2;font-weight:400;letter-spacing:-.025em}
+.home-page .universe-experience strong{font-weight:600}
+.home-page .universe-bottom{align-items:flex-end;gap:24px}
+.home-page .universe-bottom .hint{font-size:12px;max-width:270px;text-align:right}
+.service-dialog{position:fixed;inset:0;margin:auto;width:min(620px,calc(100vw - 32px));max-width:620px;max-height:calc(100dvh - 40px);padding:0;border:1px solid #444;border-radius:16px;background:#0c0c0c;color:#fff;box-shadow:0 20px 90px #0009;overflow:auto;cursor:auto}
+.service-dialog::backdrop{background:#000b;backdrop-filter:blur(6px)}
+.service-dialog-inner{padding:38px}
+.service-dialog-close{display:flex;align-items:center;gap:10px;margin:0 0 22px auto;padding:6px 0;background:none;border:0;color:#bbb;font:400 13px Franie,sans-serif;cursor:pointer}
+.service-dialog-close span{font-size:26px;line-height:1}
+.service-dialog-close:hover,.service-dialog-close:focus-visible{color:#d1ff00}
+.service-dialog-eyebrow{margin:0 0 12px;color:#d1ff00;font-size:11px;letter-spacing:.08em}
+.service-dialog h2{margin:0 0 20px;color:#fff;font-size:clamp(26px,3.2vw,42px);font-weight:600;line-height:1.08;letter-spacing:-.035em;text-transform:uppercase;overflow-wrap:anywhere}
+#service-dialog-description{margin:0;color:#c8c8c8;font-size:16px;line-height:1.6;font-weight:400}
+.service-development{margin-top:28px;padding-top:22px;border-top:1px solid #303030}.service-development[hidden]{display:none}
+.service-development h3{margin:0 0 16px;font-size:12px;font-weight:500;color:#d1ff00;text-transform:uppercase;letter-spacing:.05em}
+.service-development ul{display:grid;grid-template-columns:1fr 1fr;gap:12px 24px;list-style:none;margin:0;padding:0}
+.service-development li{font-size:14px;color:#eee;line-height:1.45}
+@media(max-width:600px){.home-page .home-hero-title{font-size:clamp(42px,10.5vw,64px)}.home-page .universe-bottom{display:flex;flex-direction:column;align-items:flex-start;gap:16px}.home-page .universe-bottom .hint{text-align:left}.service-dialog-inner{padding:24px}.service-development ul{grid-template-columns:1fr}.service-dialog{max-height:calc(100dvh - 24px)}}
+
+/* v22: one-page flow and simple contact form. */
+body .brand-navigation .brand-nav-container{min-height:52px;padding-top:8px;padding-bottom:8px}
+.brand-navigation .quiet-brand-pair img{height:30px}.brand-navigation .quiet-brand-pair a:first-child img{height:30px}
+.home-about,.home-contact{position:relative;background:#000;color:#fff;min-width:0}
+.home-about{scroll-margin-top:112px}.home-about .method{padding-top:0}.home-about .method-media{top:110px;height:calc(100svh - 110px)}
+.home-contact.contact-shell .contact-layout{padding-top:0;margin:0;min-height:0}
+.home-contact.contact-shell .contact-intro{padding:85px 4.5vw;min-height:0}
+.home-contact.contact-shell .contact-intro h2{margin:0 0 38px;font-size:clamp(38px,4.7vw,72px);line-height:1.06;letter-spacing:-.045em}
+.home-contact.contact-shell .contact-intro h2 b{display:block;font-weight:700;text-transform:uppercase}
+.home-contact.contact-shell .contact-intro h2>span{display:block;font-size:clamp(16px,1.85vw,30px);font-weight:500;white-space:nowrap;letter-spacing:-.04em;margin-top:14px;text-transform:uppercase}
+.home-contact.contact-shell .brief-panel{padding:85px 4.5vw;min-height:0;display:flex;align-items:center;background:#fff;color:#111}
+#simple-contact{width:100%;max-width:650px;margin:auto}
+#simple-contact h2{font-size:clamp(28px,3vw,44px);font-weight:500;line-height:1.1;margin:0 0 32px;letter-spacing:-.035em}
+.simple-fields{display:grid;grid-template-columns:1fr 1fr;gap:22px 18px}.simple-fields .full{grid-column:1/-1}
+.simple-fields label{display:flex;flex-direction:column;gap:9px;font-size:13px;font-weight:500}
+.simple-fields input,.simple-fields textarea{box-sizing:border-box;width:100%;min-width:0;padding:12px;border:1px solid #aaa;border-radius:0;background:#fff;color:#111;font:400 16px/1.5 Franie,sans-serif;resize:vertical}
+.simple-fields input:focus,.simple-fields textarea:focus{outline:2px solid #111;outline-offset:2px}
+.optional-services{border:0;padding:0;margin:26px 0}.optional-services legend{font-size:13px;font-weight:500;margin-bottom:14px}.optional-services legend span{font-weight:400;color:#666}
+.service-choices{display:flex;flex-wrap:wrap;gap:8px}
+.service-choice{display:flex;align-items:center;gap:7px;border:1px solid #ccc;padding:9px 10px;font-size:12px;cursor:pointer;color:#333}
+.service-choice:has(input:checked){background:#d1ff00;border-color:#111;color:#111}.service-choice input{accent-color:#111;width:14px;height:14px}
+.simple-submit{display:block;margin-left:auto;background:#111;color:#fff;border:1px solid #111;padding:15px 24px;font:500 14px Franie,sans-serif;cursor:pointer}.simple-submit:hover{background:#d1ff00;color:#111}.simple-submit:disabled{opacity:.5}
+#contact-status{font-size:14px;line-height:1.5;margin:16px 0;color:#333}.simple-demo{font-size:11px;color:#777;margin-top:18px}
+@media(max-width:800px){.home-contact.contact-shell .contact-layout{grid-template-columns:1fr}.home-contact.contact-shell .contact-intro,.home-contact.contact-shell .brief-panel{padding:60px 6vw}.home-about .method-media{top:0;height:55svh}.home-contact.contact-shell .contact-intro h2>span{font-size:clamp(17px,3.5vw,28px)}}
+@media(max-width:600px){body .brand-navigation .brand-nav-container{min-height:0;padding:8px 12px;gap:8px}.simple-fields{grid-template-columns:1fr}.home-contact.contact-shell .contact-intro h2>span{font-size:4.3vw}.home-about{scroll-margin-top:142px}}
+.home-page .home-about #metodo .method-media{top:110px;height:calc(100svh - 110px)}
+@media(max-width:800px){.home-page .home-about #metodo .method-media{top:0;height:55svh}}
+
+/* v23: continuous brand strip and footer hierarchy. */
+.home-page .brand-marquee{width:100%;max-width:100%;overflow:hidden;margin:48px 0 0;position:relative;mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)}
+.brand-marquee-track{display:flex;width:max-content;animation:brand-marquee-scroll 70s linear infinite;will-change:transform}
+.brand-marquee-group{display:flex;align-items:center;flex-shrink:0;gap:72px;padding:0 72px 0 0;margin:0;list-style:none}
+.brand-marquee-group li{display:flex;align-items:center;justify-content:center;width:160px;height:100px;flex:0 0 160px}
+.brand-marquee-group img{display:block;max-width:100%;width:auto;max-height:68px;height:auto;object-fit:contain;filter:brightness(0) invert(1);opacity:.8}
+.brand-marquee:hover .brand-marquee-track{animation-play-state:paused}
+@keyframes brand-marquee-scroll{to{transform:translateX(-50%)}}
+.home-page .home-footer{position:relative;clear:both}
+.home-page .home-footer .home-footer-statement{font-weight:400;line-height:1.18;letter-spacing:-.035em}
+.home-page .home-footer .home-footer-statement em{font-weight:500;font-style:normal;color:#ff7302}
+.home-page .home-footer .statement-line{font-weight:400}
+.home-page .home-footer .home-footer-directory h2{font-weight:500;font-size:11px;letter-spacing:.04em;color:#888}
+.home-page .home-footer .home-footer-directory nav a{font-weight:400!important;color:#aaa;font-size:12px!important}
+.home-page .home-footer .footer-legal small{font-weight:400;font-size:11px;line-height:1.5;color:#888}
+.home-page .home-footer .footer-return{font-weight:400;font-size:12px}
+@media(max-width:600px){.brand-marquee-group{gap:36px;padding-right:36px}.brand-marquee-group li{width:120px;flex-basis:120px;height:80px}.brand-marquee-group img{max-height:52px}.home-page .brand-marquee{margin-top:30px}}
+@media(prefers-reduced-motion:reduce){.brand-marquee-track{animation:none}.brand-marquee{overflow-x:auto;mask-image:none}.brand-marquee-group[aria-hidden=true]{display:none}}
+
+/* v24: visible brand heading, quieter logos, inset contact and single legal row. */
+.home-page #marcas #client-heading{display:block!important;visibility:visible!important;opacity:1!important;color:#fff!important;position:relative;z-index:2;text-align:center;transform:none!important;font-size:clamp(42px,5.7vw,106px);line-height:1.02}
+.home-page #marcas #client-heading strong{color:inherit;font-weight:600;white-space:normal}
+.home-page #marcas #client-heading .client-word-accent{color:#ff7302}
+.home-page #marcas .brand-marquee-group img{filter:brightness(0) invert(.48);opacity:1}
+.home-page #marcas .brand-marquee-group img[src*="bimbo"]{filter:grayscale(1);opacity:.72}
+.home-page .home-contact.contact-shell .contact-layout{grid-template-columns:minmax(0,1fr) minmax(0,1fr);padding:28px 4.5vw 40px;gap:4vw;background:#000}
+.home-page .home-contact.contact-shell .contact-intro{padding:32px 0;min-width:0}
+.home-page .home-contact.contact-shell .brief-panel{padding:38px 32px;min-width:0;width:100%;box-sizing:border-box}
+.home-page #simple-contact{max-width:none;min-width:0}
+.home-page #simple-contact h2{font-size:clamp(26px,2.65vw,42px)}
+.home-page .home-footer .home-footer-statement,.home-page .home-footer .statement-line{font-weight:400!important}
+.home-page .home-footer .home-footer-statement em{font-weight:400!important}
+.home-page .home-footer .footer-open-bottom{display:flex!important;align-items:center!important;justify-content:space-between;gap:24px;flex-wrap:wrap}
+.home-page .home-footer .footer-legal{flex:0 1 auto}
+.home-page .home-footer .footer-legal small{display:block;font-size:12px!important;font-weight:400!important;white-space:nowrap;color:#888}
+.home-page .home-footer .footer-return{position:static!important;transform:none!important;font-size:12px!important;font-weight:400!important;white-space:nowrap;order:3;margin:0 auto}
+.home-page .home-footer .footer-social-row{display:flex;align-items:center;gap:16px;color:#888;font-size:12px;font-weight:400;white-space:nowrap}
+.footer-social-brand,.footer-social-row .social-icons{display:flex;align-items:center;gap:12px}
+.footer-social-row nav{display:block!important;margin:0;padding:0}
+.footer-social-row .social-icon{display:inline-flex;width:17px;height:17px;color:#888}
+.home-page .home-footer .home-footer-directory nav a{font-weight:400!important}
+@media(min-width:1400px){.home-page .home-footer .footer-return{order:0;margin:0}}
+@media(max-width:800px){.home-page .home-contact.contact-shell .contact-layout{grid-template-columns:1fr;gap:20px;padding:24px 6vw 40px}.home-page .home-contact.contact-shell .brief-panel{padding:32px 24px}.home-page .home-footer .footer-legal small{white-space:normal}.home-page .home-footer .footer-social-row{flex-wrap:wrap;gap:12px}.home-page .home-footer .footer-return{margin:0}}
+
+/* v25: contact proportions, complete ornament and explicit heading emphasis. */
+.home-page #marcas #client-heading{color:#fff!important;-webkit-text-fill-color:#fff;clip-path:none!important;height:auto!important;max-height:none!important;overflow:visible!important}
+.home-page #marcas #client-heading .client-word-accent{color:#ff7302!important;-webkit-text-fill-color:#ff7302}
+.home-page .home-contact.contact-shell .channel-grid{width:100%;max-width:none;gap:14px}
+.home-page .home-contact.contact-shell .channel-card-content{min-height:180px;padding:22px;gap:10px}
+.home-page .home-contact.contact-shell .contact-intro{position:relative;overflow:visible;padding-bottom:150px}
+.home-page .home-contact.contact-shell .shape-two{right:0;top:auto;bottom:12px;width:120px;height:120px;transform:none;z-index:1}
+.home-page .home-contact.contact-shell .shape-one{left:0;bottom:12px;transform:none}
+.home-page .home-footer .home-footer-statement em{font-weight:700!important}
+.home-page .home-footer .home-footer-statement,.home-page .home-footer .home-footer-statement .statement-line{font-weight:400!important}
+@media(max-width:600px){.home-page .home-contact.contact-shell .channel-card-content{padding:16px;min-height:155px}.home-page .home-contact.contact-shell .contact-intro{padding-bottom:125px}.home-page .home-contact.contact-shell .shape-two{width:96px;height:96px}.home-page .home-contact.contact-shell .shape-one{width:96px;height:96px}}
+
+/* v26: constrain the marquee's intrinsic width so the heading stays in viewport. */
+.home-page #marcas{display:block;width:100%;min-width:0;max-width:100%;box-sizing:border-box}
+.home-page #marcas .client-stage{display:block;width:100%;min-width:0;max-width:100%;margin:0;transform:none}
+.home-page #marcas #client-heading{width:100%;max-width:1100px;min-width:0;margin:0 auto;text-align:center;font-size:clamp(38px,5.7vw,106px);line-height:1.04}
+.home-page #marcas .brand-marquee{width:100%;min-width:0;max-width:100%;margin-top:48px;contain:inline-size;overflow:hidden}
+
+/* v27: anchored service details and gentle motion. */
+.home-page .universe-bottom .hint{max-width:none;white-space:nowrap;flex-shrink:0}
+#service-dialog{inset:auto;margin:0;width:min(500px,calc(100vw - 32px));max-width:500px;border-color:#242424;border-radius:16px}
+#service-dialog .service-dialog-inner{padding:28px}
+#service-dialog h2{font-size:clamp(26px,2.3vw,36px)}
+#service-dialog::backdrop{background:rgba(0,0,0,0);backdrop-filter:none;transition:background .36s ease}
+#service-dialog.is-visible::backdrop{background:rgba(0,0,0,.48)}
+@media(max-width:700px){.home-page .universe-bottom{flex-direction:column;align-items:flex-start}.home-page .universe-bottom .hint{text-align:left;font-size:clamp(10px,2.7vw,12px)}#service-dialog .service-dialog-inner{padding:22px}}
+@media(prefers-reduced-motion:reduce){#service-dialog::backdrop{transition:none}}
+
+/* v28: footer hierarchy and balanced brand-section spacing. */
+.home-page .home-footer .home-footer-statement,
+.home-page .home-footer .home-footer-statement .statement-line{font-weight:300!important}
+.home-page .home-footer .home-footer-statement em{font-weight:600!important}
+.home-page .home-footer .footer-social-brand>span{font-weight:600;color:#bcbcbc}
+.home-page #marcas{height:auto;min-height:0;padding-block:100px}
+.home-page #marcas+#proyectos{padding-top:0}
+@media(max-width:800px){.home-page #marcas{padding-block:64px}}
+
+/* v29: generous and symmetrical space around partner content. */
+.home-page #marcas{padding-block:160px}
+@media(max-width:800px){.home-page #marcas{padding-block:100px}}

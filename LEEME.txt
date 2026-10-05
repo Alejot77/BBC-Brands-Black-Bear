@@ -1,0 +1,1 @@
+Extrae todo antes de importar en Vercel. El formulario requiere configurar dist/contact-config.json.

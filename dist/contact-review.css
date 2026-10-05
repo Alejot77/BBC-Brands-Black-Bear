@@ -26,7 +26,7 @@
 .contact-shell .contact-shape{position:absolute;pointer-events:none;z-index:0;width:125px;height:125px;object-fit:contain}
 .contact-shell .shape-one{left:-45px;bottom:0;transform:rotate(-15deg)}
 .contact-shell .shape-two{right:-40px;top:40%;transform:rotate(12deg)}
-.contact-shell>header .brand-motion-bbc.on-light img{filter:none!important}
+.contact-shell>header:not(.brand-navigation) .brand-motion-bbc.on-light img{filter:none!important}
 .contact-shell .project-options span{overflow-wrap:anywhere}
 .contact-shell .contact-fields{min-width:0}
 .contact-shell .contact-fields input,.contact-shell .brief-step>input{width:100%;min-width:0}
