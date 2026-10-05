@@ -311,3 +311,19 @@ body .brand-navigation .brand-nav-container{min-height:52px;padding-top:8px;padd
 /* v29: generous and symmetrical space around partner content. */
 .home-page #marcas{padding-block:160px}
 @media(max-width:800px){.home-page #marcas{padding-block:100px}}
+
+/* v30: contact heading, equal-height card grid and optional service dropdown. */
+.home-page .home-contact.contact-shell .contact-layout{align-items:stretch}
+.home-page .home-contact.contact-shell .contact-intro{display:flex;flex-direction:column;padding:0;min-height:0}
+.home-page .home-contact.contact-shell .contact-intro .contact-main-title{font-size:clamp(36px,4.3vw,72px);font-weight:700;line-height:1.04;text-transform:uppercase;margin:0 0 28px;position:relative;z-index:1}
+.home-page .home-contact.contact-shell .channel-grid{flex:1;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:repeat(2,minmax(180px,1fr));align-items:stretch}
+.home-page .home-contact.contact-shell .channel-card{height:100%;min-height:0;background:#090909}
+.home-page .home-contact.contact-shell .channel-card-content{height:100%;min-height:0;padding:24px;display:flex;flex-direction:column}
+.home-page .home-contact.contact-shell .channel-status{margin-top:auto;padding-top:20px}
+.home-page .home-contact.contact-shell .brief-panel{align-self:stretch}
+#simple-contact .service-dropdown label{display:block;margin-bottom:10px;font-size:14px;font-weight:500}
+#simple-contact .service-dropdown label span{color:#777;font-weight:400}
+#simple-contact .service-dropdown select{display:block;width:100%;min-height:50px;padding:12px 14px;border:1px solid #aaa;border-radius:0;background:#fff;color:#111;font:400 16px Franie,sans-serif;cursor:pointer}
+#simple-contact .service-dropdown select:focus-visible{outline:2px solid #111;outline-offset:3px}
+@media(max-width:800px){.home-page .home-contact.contact-shell .contact-intro .contact-main-title{font-size:clamp(36px,7vw,60px)}.home-page .home-contact.contact-shell .channel-grid{flex:none;grid-template-rows:repeat(2,minmax(180px,auto))}}
+@media(max-width:450px){.home-page .home-contact.contact-shell .channel-card-content{padding:16px}.home-page .home-contact.contact-shell .contact-intro .contact-main-title{font-size:8.5vw}}

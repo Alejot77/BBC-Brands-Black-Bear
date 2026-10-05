@@ -86,7 +86,7 @@ form.addEventListener('submit',async event=>{
  try{
   const config=await fetch('/contact-config.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw Error();return r.json()});
   if(!config.submitEndpoint){status.textContent='El envío aún no está habilitado. El canal de recepción está pendiente de configuración.';return}
-  const values=new FormData(form);const payload=Object.fromEntries(values);payload.servicios=values.getAll('servicios');
+  const values=new FormData(form);const payload=Object.fromEntries(values);payload.servicios=values.getAll('servicios').filter(Boolean);
   const response=await fetch(config.submitEndpoint,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload),signal:AbortSignal.timeout(15000)});
   if(!response.ok)throw Error();const result=await response.json();if(result.success!==true)throw Error();
   status.textContent='Gracias. Recibimos tu mensaje.';form.reset();
